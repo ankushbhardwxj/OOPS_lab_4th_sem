@@ -30,8 +30,8 @@ public: void getdata()
                 max=arr1[i][j];
               }
             }
+              cout<<"Max in "<<i+1<<" is "<<max<<endl;
           }
-          cout<<"Max in matrix is "<<max<<endl;
         }
 
 };

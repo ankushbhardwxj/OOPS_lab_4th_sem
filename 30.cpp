@@ -20,22 +20,22 @@ public: void getdata()
 
         void findmax()
         {
-          int max=0;
+          int max=0;i
           for(int i=0;i<row;i++)
           {
             for(int j=0;j<colm;j++)
             {
-              if(arr1[i][j]>max)
+              if(arr1[j][i]>max)
               {
-                max=arr1[i][j];
+                max=arr1[j][i];
               }
             }
+              cout<<"Max in "<<i+1<<" is "<<max<<endl;
           }
-          cout<<"Max in matrix is "<<max<<endl;
         }
 
 };
-int main()
+int main()i
 {
   matrix m;
   m.getdata();
