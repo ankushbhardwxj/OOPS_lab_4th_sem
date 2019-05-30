@@ -21,7 +21,7 @@ class volleyball{
 
         for(i=0; i<no; i++)
         {
-            cout << "Enter the score of matche: " << i+1 << endl;
+            cout << "Enter the score of matches: " << i+1 << endl;
             cin >> score[i];
         }
     }
