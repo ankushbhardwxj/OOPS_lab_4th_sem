@@ -1,39 +1,51 @@
-// WAP in C++ to define a class that displays the total bill of items and the details. The
-// customer purchases ‘ n ‘ items. Derive a class from the base class that calculates a
-// discount on the bill provided to the customer.
-
 #include<iostream>
 using namespace std;
+class bill{
 
-class A{
-    char n[30];
-    int a[50], b_no, no, total = 0;
-    int i;
-    public:
-    void input()
-    {
-        cout << "Name of customer: ";
-        cin >> n;
-        cout << "Enter the bill no: ";
-        cin >> b_no;
-        cout << "Enter no. of items bought: ";
-        cin >> n;
-        for(i=0; i<no; i++)
+public:
+  int cost[100];
+  int item_code[100];
+  int n;
+  void getdata()
         {
-            cout << "Enter cost of item: " << i+1;
-            cin >> a[i];
+            cin>>n;
+            for(int i=0;i<n;i++)
+            {
+              cin>>item_code[i]>>cost[i];
+            }
         }
-        for(i=0; i<no; i++)
+        void show()
         {
-            total += a[i];
+          for(int i=0;i<n;i++)
+          {
+            cout<<item_code[i]<<" "<<cost[i]<<endl;
+          }
         }
-    }
-    void display()
-    {
-        cout << "Name: " << n << endl;
-        cout << "Bill no: " << b_no << endl;
-        cout << "Items bought: " << no << endl;
-        cout << "Total: " << total << endl;
-
-    }
 };
+class discount:public bill{
+  int totalamt=0,totalamt2;
+  float discnt,discntamt;
+public: void total()
+        {
+          getdata();
+          for(int i=0;i<n;i++)
+          {
+            totalamt=totalamt+cost[i];
+          }
+          show();
+          cout<<totalamt<<endl;
+          cout<<"Enter discount %"<<endl;
+          cin>>discnt;
+           discntamt=totalamt*(discnt/100);
+           cout<<"discount amt"<<discntamt<<endl;
+          totalamt2= totalamt - discntamt;
+          cout<<totalamt2<<endl;
+        }
+};
+int main()
+{
+  discount d;
+  d.total();
+
+  return 0;
+}
