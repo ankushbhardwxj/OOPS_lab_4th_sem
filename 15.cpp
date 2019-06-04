@@ -6,17 +6,17 @@ using namespace std;
 
 class xyz
 {
-    int x, y;
+    int sum, diff;
     public:
     int getdata(int x, int y)
     {
-        this->x = x+y;
-        this->y = x-y;
+        this->sum = x+y;
+        this->diff = x-y;
     }
-    void putdata()
+    void display()
     {
-        cout << "Addition is: " << x << endl;
-        cout << "Subtraction is: " << y << endl;
+        cout << "Addition is: " << sum << endl;
+        cout << "Subtraction is: " << diff << endl;
     }
 };
 
@@ -24,6 +24,6 @@ int main()
 {
     xyz obj;
     obj.getdata(10,4);
-    obj.putdata();
+    obj.display();
     return 0;
 }

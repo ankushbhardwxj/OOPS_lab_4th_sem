@@ -16,8 +16,8 @@ public:
   complex operator-(complex c) //return type of function must be
   {                             //complex type
     complex t;
-    t.real=real+c.real;
-    t.imag=imag+c.imag;
+    t.real=real-c.real;
+    t.imag=imag-c.imag;
     return(t);
   }
 };

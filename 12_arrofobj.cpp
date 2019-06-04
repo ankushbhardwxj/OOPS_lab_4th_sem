@@ -14,8 +14,6 @@ public: void getdata()
           cout<<name;
           cout<<empid;
         }
-
-
 };
 int main()
 {
