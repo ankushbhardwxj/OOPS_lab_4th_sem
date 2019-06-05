@@ -29,7 +29,7 @@ class total: public data{
 };
 
 class final: public total{
-    private:
+protected:
     float prec;
     public:
     void calculate()
