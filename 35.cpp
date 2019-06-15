@@ -34,11 +34,11 @@ protected:
     public:
     void calculate()
     {
-        prec = (t/3) * 100;
+        prec = (t/300) * 100.0;
     }
     void show()
     {
-        cout << "Percentage is: " << prec << endl;
+        cout << "Percentage is: " << prec <<"%"<< endl;
     }
 };
 
