@@ -1,18 +1,18 @@
 #include<iostream>
 using namespace std;
 class sub{
-  int marks[100];
+  int sub_marks[100];
   int tsum=0;
 public: void getdata()
         {
-          cout<<"Enter marks: "<<endl;
+          cout<<"Enter subject marks: "<<endl;
           for(int i=0;i<7;i++)
-          cin>>marks[i];
+          cin>>sub_marks[i];
         }
         void sum()
         {
           for(int i=0;i<7;i++)
-          tsum=tsum+marks[i];
+          tsum=tsum+sub_marks[i];
         }
         void display()
         {
